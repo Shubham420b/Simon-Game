@@ -4,11 +4,7 @@ var buttonColors = ["green", "red", "yellow", "blue"];
 
 $(".start").on("click", function(){
   $("h1").text("Level 1");
-  nextSequence();
-});
-
-$(document).on("keypress",function(){
-  $("h1").text("Level 1");
+  $(".start").toggle();
   nextSequence();
 });
 
@@ -30,11 +26,12 @@ function check(color){
       },1000);
     }
   }else{
-    $("h1").text("Game Over, Press Any Key to Restart");
+    $("h1").text("Game Over, Click Restart To Restart The Game");
     var wrong = new Audio("sounds/wrong.mp3");
     wrong.play();
     gamePattern = [];
     clicked = [];
+    $(".start").text("Restart").toggle();
     $("body").addClass("game-over");
     setTimeout(function(){
       $("body").removeClass("game-over");
