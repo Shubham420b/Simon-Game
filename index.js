@@ -7,10 +7,10 @@ $(".start").on("click", function(){
   nextSequence();
 });
 
-// $(document).on("keypress",function(){
-//   $("h1").text("Level 1");
-//   nextSequence();
-// });
+$(document).on("keypress",function(){
+  $("h1").text("Level 1");
+  nextSequence();
+});
 
 $(".btn").click(function(){
   var buttonPressed = this.id;
