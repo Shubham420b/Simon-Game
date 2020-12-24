@@ -2,10 +2,15 @@ var gamePattern = [];
 var clicked = [];
 var buttonColors = ["green", "red", "yellow", "blue"];
 
-$(document).on("keypress",function(){
+$(".start").on("click", function(){
   $("h1").text("Level 1");
   nextSequence();
 });
+
+// $(document).on("keypress",function(){
+//   $("h1").text("Level 1");
+//   nextSequence();
+// });
 
 $(".btn").click(function(){
   var buttonPressed = this.id;
